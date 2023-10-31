@@ -1,4 +1,4 @@
-class Todo {
+class ToDo {
     constructor(id, description) {
       this._id = id;
       this._description = description;
@@ -13,4 +13,4 @@ class Todo {
       this.description = newDescription;
     }
   }
-  
+  module.exports = { ToDo }
