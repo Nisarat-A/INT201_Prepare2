@@ -1,0 +1,7 @@
+const { Todo } = require('./Todo/Todo.js')
+const { todoManagement, doSomething } = require('./TodoManagement.js')
+const td1 = new Todo('jokking')
+console.log(td1)
+const { addTodo } = todoManagement()
+console.log(addTodo('shopping'))
+console.log(doSomething('js'))
