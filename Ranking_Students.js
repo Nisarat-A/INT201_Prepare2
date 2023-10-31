@@ -106,3 +106,19 @@
       console.log("Top 5 Students by Average Score:");
      getTopStudents(student,5).forEach(student => {
      console.log(`Name: ${student.name}, Average Score: ${avgTestScores(student)}`);});
+
+     //list student attendent rate <80 and avg score<70
+     function underPerformStudents(students) {
+        const attend = students.filter((student) => attendanceRate(student) < 80 && avgTestScores(student) < 70)
+        .map((underPerformStudents) => {
+            return {
+                name: underPerformStudents.name,
+                attendanceRate: attendanceRate(underPerformStudents),
+                avg: avgTestScores(underPerformStudents)
+            }
+        })
+        return attend
+      }
+      //show student underoerform
+      console.log("UnderPerform Student")
+      console.log(underPerformStudents(student));
